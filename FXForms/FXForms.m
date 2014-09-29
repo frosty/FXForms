@@ -1823,6 +1823,8 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     if ([(NSObject*)form respondsToSelector:@selector(toolbarCloseButtonTitle)]) {
         NSString *title = [form toolbarCloseButtonTitle];
         self.toolbarCloseButtonTitle = title;
+    } else {
+        self.toolbarCloseButtonTitle = @"Dismiss";
     }
 }
 
